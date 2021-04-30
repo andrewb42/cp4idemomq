@@ -15,7 +15,7 @@ spec:
       queueManager:
         enabled: true
     availability:
-      type: SingleInstance
+      type: NativeHA
     name: QM1
   template:
     pod:
@@ -28,8 +28,8 @@ spec:
   web:
     enabled: true
   tracing:
-    enabled: false
-    namespace: tracing
+    enabled: true
+    namespace: opsdash
   pki:
     keys:
       - name: label1
